@@ -6,11 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
-    <title>Booking Mobil Alifah</title>
+
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<title>Booking Mobil Alifah</title>
 
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -80,9 +82,9 @@
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
               <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-            </a>     
-               <a href="home.php" class="nav-link px-2 text-white">Home</a>
-               <a href="booking.php" class="nav-link px-2 text-white">Booking</a>
+            </a>    
+               <a href="home.php" class="nav-link px-2 text-white"><strong>Home</strong></a>
+               <a href="booking.php" class="nav-link px-2 text-white"><strong>Booking</strong></a>
           </div>
         </div>
       </header>
@@ -90,60 +92,80 @@
 <main>
     <?php 
     $nama = "Alifah_1202204114";
-    $date = isset($_GET['date']) ? $_GET['date'] : '';
-    $time = isset($_GET['time']) ? $_GET['time'] : '';
-    $days = isset($_GET['days']) ? $_GET['days'] : '';
-    $car = isset($_GET['car']) ? $_GET['car'] : '';
-    $phonenumber = isset($_GET['phonenumber']) ? $_GET['phonenumber'] : '';
-    $hp = isset($_GET['hp']) ? $_GET['hp'] : '';
-    $driver = isset($_GET['driver']) ? $_GET['driver'] : '';
-    $bensin = isset($_GET['bensin']) ? $_GET['bensin'] : '';
-
-    $service = $hp or $driver or $bensin;
     ?> 
   <section class="py-5 text-center container">
     <div >
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h3 >Thank You <?php echo $nama ?> For Reserving</h3>
-        <h5 >Please double check your reservation details</h5>
+        <h1>Welcome To EAD RENT</h1>
+        <p class="lead text-muted"><strong>Find Your Best Deal, Here!</strong></p>
       </div>
     </div>
   </section>
 
-  <table class="table table-success table-striped">
+  <div class="album py-5 bg-light">
     <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-  <thead>
-    <tr>
-      <th scope="col">Booking Number</th>
-      <th scope="col">Name</th>
-      <th scope="col">Check in</th>
-      <th scope="col">Check Out</th>
-      <th scope="col">Car Type</th>
-      <th scope="col">Phone Number</th>
-      <th scope="col">Service(s)</th>
-      <th scope="col">Total Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><?php
-echo(rand() . "<br>");?></td>
-      <td><?php echo $nama ?></td>
-      <td><?php echo $date ?></td>
-      <td><?php echo $time ?></td>
-      <td><?php echo $car ?></td>
-      <td><?php echo $phonenumber ?></td>
-      <td><?php echo $service ?></td>
-      <td></td>
-    </tr>
-  </tbody>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        
+        <div class="card" style="width: 22rem;">
+            <img src="https://cdn-2.tstatic.net/kupang/foto/bank/images/mobil-bekas-honda-freed-turun-harga.jpg" class="card-img-top" alt="fread">
+            <div class="card-body">
+              <center>
+              <h5 class="card-title"><strong>Honda Fread</strong></h5>
+              <p>Rp 5000.000/day</p>
+    </center>
+            </div>
+            <ul class="list-group list-group-flush">
+              <center>
+              <li class="list-group-item"> 6 kursi</li>
+              <li class="list-group-item">5500 CC</li>
+              <li class="list-group-item">Matic</li>
+    </center>
+            </ul>
+            
+            <a type="button" class="btn btn-primary" href="Alifah_mybooking.php">Book Now</a>
+          
+          </div>
+          <div class="card" style="width: 22rem;">
+            <img src="https://cdn.euroncap.com/media/59479/bmw-2-series-gran-coupe.png?mode=crop&width=359&height=235" class="card-img-top" alt="bmw">
+            <div class="card-body">
+              <center>
+              <h5 class="card-title"><strong>BMW Grand Scope</strong></h5>
+              <p>Rp 10.000.000/day</p>
+    </center>
+            </div>
+            <ul class="list-group list-group-flush">
+              <center>
+              <li class="list-group-item"> 4 kursi</li>
+              <li class="list-group-item">2000 cc</li>
+              <li class="list-group-item">Matic</li>
+    </center>
+            </ul>
+            <a type="button" class="btn btn-primary" href="Alifah_mybooking.php">Book Now</a>
+          </div>
+          <div class="card" style="width: 22rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-wncNJ03mS9R0_qdsWOjSSC8Ri0RPuKzyQ&usqp=CAU" class="card-img-top" alt="fortuner">
+            <div class="card-body">
+            <center>
+              <h5 class="card-title"><strong>Toyota Fortuner</strong></h5>
+              <p>Rp 8.000.000/day</p>
+    </center>
+            </div>
+            <ul class="list-group list-group-flush">
+              <center>
+              <li class="list-group-item"> 7 kursi</li>
+              <li class="list-group-item">2600 CC</li>
+              <li class="list-group-item">Manual</li>
+    </center>
+            </ul>
+            <a type="button" class="btn btn-primary" href="Alifah_mybooking.php">Book Now</a>
+          </div>   
+       
+      </div>
     </div>
   </div>
-</table>
 
 </main>
-
 <footer>
     <div class="card-footer text-muted">
         <p class="bawah"> <?php echo $nama ?></p>
