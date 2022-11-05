@@ -82,7 +82,7 @@
               <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
             </a>
                <a href="home.php" class="nav-link px-2 text-white"><strong>Home</strong></a>
-               <a href="booking.php" class="nav-link px-2 text-white"><strong>Booking</storng></a>
+               <a href="Alifah_booking.php" class="nav-link px-2 text-white"><strong>Booking</storng></a>
           </div>
         </div>
       </header>
@@ -99,9 +99,9 @@
       </div>
       <div class="row g-0 text">
         <div class="col-sm-6 col-md-8">
-          <div class="row g-5">
+          <div class="col g-5 d-flex">
             <div class="col-md-7 col-lg-8">
-              <form class="" action="booking.php" method="GET">
+              <form class="" action="Alifa_booking.php" method="GET">
                 <div class="row g-3">
                 <div class="col-12">
                     <label for="nama" class="form-label">Name</label>
@@ -127,7 +127,7 @@
                     <label for="car" class="form-label">Car Type</label>
                     <select class="form-select" id="car" name="car">
                     <option selected>Select Car</option>
-                    <option value="Fread">Honda Fread</option>
+                    <option value="Freed">Honda Freed</option>
                     <option value="bmw">BMW Grand Coupe</option>
                     <option value="fortuner">Toyota Fortuner</option>
                     </select>
@@ -158,13 +158,14 @@
         
                 </div>
         
-                <hr class="my-4">
-        
-                <button class="w-100 btn btn-success" type="submit">Book Now</button>
+                  <hr class="my-4">
+                  <button class="w-100 btn btn-success" formaction="Alifah_booking.php" type="submit">Book Now</button>
+
               </form>
             </div>
-            <div class="col-md-7 col-lg-8">
-            
+          <div class="col-lg-10 col-md-8">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-wncNJ03mS9R0_qdsWOjSSC8Ri0RPuKzyQ&usqp=CAU" class="card-img-top" alt="fortuner">
+            <div class="card-body">
             </div>
           </div>
   </div>

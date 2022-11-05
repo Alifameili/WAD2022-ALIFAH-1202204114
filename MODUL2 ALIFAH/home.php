@@ -79,12 +79,12 @@
 
     <header class="p-3 text-bg-dark">
         <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <div class="d-flex flex-wrap align-items-center justify-content-center">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
               <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
             </a>    
                <a href="home.php" class="nav-link px-2 text-white"><strong>Home</strong></a>
-               <a href="booking.php" class="nav-link px-2 text-white"><strong>Booking</strong></a>
+               <a href="Alifah_booking.php" class="nav-link px-2 text-white"><strong>Booking</strong></a>
           </div>
         </div>
       </header>
@@ -108,10 +108,10 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
         
         <div class="card" style="width: 22rem;">
-            <img src="https://cdn-2.tstatic.net/kupang/foto/bank/images/mobil-bekas-honda-freed-turun-harga.jpg" class="card-img-top" alt="fread">
+            <img src="https://cdn-2.tstatic.net/kupang/foto/bank/images/mobil-bekas-honda-freed-turun-harga.jpg" class="card-img-top" alt="freed">
             <div class="card-body">
               <center>
-              <h5 class="card-title"><strong>Honda Fread</strong></h5>
+              <h5 class="card-title"><strong>Honda Freed</strong></h5>
               <p>Rp 5000.000/day</p>
     </center>
             </div>

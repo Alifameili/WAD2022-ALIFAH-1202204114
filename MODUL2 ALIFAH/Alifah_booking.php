@@ -6,14 +6,15 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
-    <title>Booking Mobil Alifah</title>
+
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-  
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>Booking Mobil Alifah</title>
 
     <style>
       .bd-placeholder-img {
@@ -83,7 +84,7 @@
               <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
             </a>     
                <a href="home.php" class="nav-link px-2 text-white">Home</a>
-               <a href="booking.php" class="nav-link px-2 text-white">Booking</a>
+               <a href="Alifah_booking.php" class="nav-link px-2 text-white">Booking</a>
           </div>
         </div>
       </header>
@@ -128,8 +129,7 @@
   </thead>
   <tbody>
     <tr>
-      <td>
-        <?php
+      <td><?php
 echo(rand() . "<br>");?></td>
       <td><?php echo $nama ?></td>
       <td><?php echo $date ?></td>
@@ -151,7 +151,10 @@ echo(rand() . "<br>");?></td>
         <p class="bawah"> <?php echo $nama ?></p>
       </div>
 </footer>
+
+
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
       
   </body>
 </html>
