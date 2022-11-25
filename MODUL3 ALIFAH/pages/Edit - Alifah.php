@@ -41,13 +41,13 @@ $result = mysqli_query($connector, $sql);
       <?php
       while ($getDetail = mysqli_fetch_array($result)) {
         echo "
-                <h1 class='tambahh1'>" . $getDetail["nama_mobil"] . "</h1>
-                <p class='tambahp'>Detail Mobil " . $getDetail["nama_mobil"] . "</p>
+                <h1 class='tambahh1'>" . $getDetail["nama_nobil"] . "</h1>
+                <p class='tambahp'>Detail Mobil " . $getDetail["nama_nobil"] . "</p>
                 <div class='d-flex justify-content-center align-items-start gap-5 mt-5'>
                   <img src='../asset/images/" . $getDetail["foto_mobil"] . "' alt='foto_mobil'>
                   <form action='../config/edit.php?id=" . $getDetail["id_mobil"] . "' method='POST' enctype='multipart/form-data'>
                     <label for='nama'>Nama Mobil</label>
-                    <input type='text' id='nama' name='nama' value='" . $getDetail["nama_mobil"] . "' >
+                    <input type='text' id='nama' name='nama' value='" . $getDetail["nama_nobil"] . "' >
                     <label for='pemilik'>Nama Pemilik</label>
                     <input type='text' id='pemilik' name='pemilik' value='" . $getDetail["pemilik_mobil"] . "' >
                     <label for='merk'>Merk</label>
@@ -60,9 +60,9 @@ $result = mysqli_query($connector, $sql);
                     <input type='file' class='form-control' id='inputGroupFile01' value='" . $getDetail["foto_mobil"] . "' name='gambar' style='height: 40px;'>
                     <label for='status'>Status Pembayaran</label>
                     <span class='d-flex'>
-                      <input type='radio' name='status' id='lunas' value='Lunas' " . (($getDetail["status_pembayaran"] == 'Lunas') ? 'checked="checked"' : "") . " style='width: 15px; height: 15px; margin-right:10px;'>
+                      <input type='radio' name='status' id='lunas' value='Lunas' " . (($getDetail["status_pemabayaran"] == 'Lunas') ? 'checked="checked"' : "") . " style='width: 15px; height: 15px; margin-right:10px;'>
                       <label for='lunas' style='margin-top: 15px; margin-right:10px;'>Lunas</label>
-                      <input type='radio' name='status' id='belum' value='Belum Lunas' " . (($getDetail["status_pembayaran"] == 'Belum Lunas') ? 'checked="checked"' : "") . " style='width: 15px; height: 15px; margin-right:10px;'>
+                      <input type='radio' name='status' id='belum' value='Belum Lunas' " . (($getDetail["status_pemabayaran"] == 'Belum Lunas') ? 'checked="checked"' : "") . " style='width: 15px; height: 15px; margin-right:10px;'>
                       <label for='belum' style='margin-top: 15px;'>Belum Lunas</label>
                     </span>
                     <button type='submit' class='btn btn-primary' style='margin-top: 40px;'>Selesai</button>

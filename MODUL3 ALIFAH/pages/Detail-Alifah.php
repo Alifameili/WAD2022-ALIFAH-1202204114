@@ -40,13 +40,13 @@ $result = mysqli_query($connector, $sql);
       <?php
       while ($getDetail = mysqli_fetch_array($result)) {
         echo "
-                <h1 class='tambahh1'>" . $getDetail["nama_mobil"] . "</h1>
-                <p class='tambahp'>Detail" . $getDetail["nama_mobil"] . "</p>
+                <h1 class='tambahh1'>" . $getDetail["nama_nobil"] . "</h1>
+                <p class='tambahp'>Detail" . $getDetail["nama_nobil"] . "</p>
                 <div class='d-flex justify-content-center align-items-start gap-5 mt-5'>
                   <img src='../asset/images/" . $getDetail["foto_mobil"] . "' alt='foto_mobil'>
                   <form action='' enctype='multipart/form-data'>
                     <label for='nama'>Nama Mobil</label>
-                    <input type='text' id='nama' name='nama' value='" . $getDetail["nama_mobil"] . "' readonly>
+                    <input type='text' id='nama' name='nama' value='" . $getDetail["nama_nobil"] . "' readonly>
                     <label for='pemilik'>Nama Pemilik</label>
                     <input type='text' id='pemilik' name='pemilik' value='" . $getDetail["pemilik_mobil"] . "' readonly>
                     <label for='merk'>Merk</label>
@@ -57,13 +57,14 @@ $result = mysqli_query($connector, $sql);
                     <textarea id='desc' name='desc' style='height:200px; width: 600px; border-radius: 8px;' readonly> " . $getDetail["deskripsi"] . " </textarea>
                     <label for='inputGroupFile01'>Foto</label>
                     <input type='file' class='form-control' id='inputGroupFile01' value='c:/" . $getDetail["foto_mobil"] . "' name='gambar' style='height: 40px;'>
-                    <label for='status'>Status Pembayaran</label>
+                    <label for='status'>Status Pemabayaran</label>
                     <span class='d-flex'>
-                      <input type='radio' name='status' id='lunas' value='Lunas' " . (($getDetail["status_pembayaran"] == 'Lunas') ? 'checked="checked"' : "") . " style='width: 15px; height: 15px; margin-right:10px;'>
+                      <input type='radio' name='status' id='lunas' value='Lunas' " . (($getDetail["status_pemabayaran"] == 'Lunas') ? 'checked="checked"' : "") . " style='width: 15px; height: 15px; margin-right:10px;'>
                       <label for='lunas' style='margin-top: 15px; margin-right:10px;'>Lunas</label>
-                      <input type='radio' name='status' id='belum' value='Belum Lunas' " . (($getDetail["status_pembayaran"] == 'Belum Lunas') ? 'checked="checked"' : "") . " style='width: 15px; height: 15px; margin-right:10px;'>
+                      <input type='radio' name='status' id='belum' value='Belum Lunas' " . (($getDetail["status_pemabayaran"] == 'Belum Lunas') ? 'checked="checked"' : "") . " style='width: 15px; height: 15px; margin-right:10px;'>
                       <label for='belum' style='margin-top: 15px;'>Belum Lunas</label>
                     </span>
+                    <a href='Edit-Alifah.php?id=" . $getDetail["id_mobil"] . "' class='btn btn-primary' style='margin-top: 40px;'>Edit</a>
                   </form>
                 </div>
             ";

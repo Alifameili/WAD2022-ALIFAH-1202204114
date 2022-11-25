@@ -33,6 +33,7 @@ if (isset($_GET['pesan'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LISTCAR-ALIFAH MEILIANA-1202204114</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <style>
     <?php include '../asset/style/index.css'; ?>
@@ -67,7 +68,7 @@ if (isset($_GET['pesan'])) {
               echo "<div class='card cardcontent' style='width: 18rem;'>
             <img src='../asset/images/" . $hasil["foto_mobil"] . "' class='card-img-top' alt='fotomobil' style='padding: 16px;'>
             <div class='card-body'>
-              <h5 class='card-title'>" . $hasil["nama_mobil"] . "</h5>
+              <h5 class='card-title'>" . $hasil["nama_nobil"] . "</h5>
               <p class='card-text'>" . substr($hasil["deskripsi"], 0, 50) . '...' . "</p>
               <span class='d-flex'>
                 <a href='Detail-alifah.php?id=" . $hasil["id_mobil"] . "' class='btn btn-primary' style='border-radius: 100px; width:140px; height: 36px;'>Detail</a>
