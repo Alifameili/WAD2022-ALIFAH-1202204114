@@ -13,7 +13,6 @@ body {
   color: #fff;
 }
 
-/* Jumbotron */
 #home h1 {
   font-family: "Inter";
   font-style: normal;
@@ -45,7 +44,7 @@ body {
   gap: 10px;
   width: 137px;
   height: 51px;
-  background: #3563e9;
+  background: #0f49f6;
   border-radius: 5px;
   border: none;
   color: white;
@@ -53,7 +52,6 @@ body {
   text-decoration: none;
 }
 
-/* Add Page */
 #form {
   padding-top: 50px;
   padding-bottom: 50px;
