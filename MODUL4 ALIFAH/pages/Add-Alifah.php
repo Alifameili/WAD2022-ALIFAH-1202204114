@@ -3,7 +3,7 @@ require '../config/connector.php';
 session_start();
 if (isset($_SESSION["login"])) {
   $login_as = $_SESSION["email"];
-  $result_login = mysqli_query($connector, "SELECT * FROM user_nama WHERE email = '$login_as'");
+  $result_login = mysqli_query($connector, "SELECT * FROM user_alifah WHERE email = '$login_as'");
   $data_login = mysqli_fetch_assoc($result_login);
 }
 ?>
@@ -13,7 +13,7 @@ if (isset($_SESSION["login"])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ADD - ALIFAH - 1202204114</title>
+  <title>ADD ALIFAH MEILIANA</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <style>
     <?php include '../asset/style/index.css'; ?>
@@ -22,7 +22,7 @@ if (isset($_SESSION["login"])) {
 
 <body>
   <!-- Nav -->
-  <nav class="navbar navbar-expand navbar-dark bg-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>">
+  <nav class="navbar navbar-expand navbar-dark bg-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "primary"; ?>">
     <div class="container py-2">
       <?php if (isset($_SESSION["login"])) : ?>
         <div class="navbar-nav">
@@ -30,14 +30,14 @@ if (isset($_SESSION["login"])) {
           <a class="nav-link" href="./List-Alifah.php">MyCar</a>
         </div>
         <div class="d-flex">
-          <a href="./Add-Alifah.php" class="btn btn-light text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" role="button">Add Car</a>
+          <a href="./Add-Alifah.php" class="btn btn-light text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "primary"; ?>" role="button">Add Car</a>
           <div class="dropdown ms-4">
-            <button class="btn btn-light dropdown-toggle text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-light dropdown-toggle text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "primary"; ?>" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <?= $data_login["nama"]; ?>
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="./Profile-Alifah.php">Profile</a></li>
-              <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="../config/logout.php">Log Out</a></li>
+              <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "primary"; ?>" href="./Profile-Alifah.php">Profile</a></li>
+              <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "primary"; ?>" href="../config/logout.php">Log Out</a></li>
             </ul>
           </div>
         </div>

@@ -7,11 +7,11 @@ if (isset($_POST["daftar"])) {
     $password = mysqli_real_escape_string($connector, $_POST["password"]);
     $pwdConfirm = mysqli_real_escape_string($connector, $_POST["password2"]);
     $no_hp = $_POST["no"];
-    $result = mysqli_query($connector, "SELECT email FROM user_Nama WHERE email = '$email'");
+    $result = mysqli_query($connector, "SELECT email FROM user_alifah WHERE email = '$email'");
 
     if (mysqli_num_rows(($result)) !== 1 && $password == $pwdConfirm) {
         $password = password_hash($password, PASSWORD_DEFAULT);
-        mysqli_query($connector, "INSERT INTO user_Nama VALUES ('', '$nama', '$email', '$password', '$no_hp')");
+        mysqli_query($connector, "INSERT INTO user_alifah VALUES ('', '$nama', '$email', '$password', '$no_hp')");
         echo "<div class='alert alert-success alert-dismissible fade show fixed-top' role='alert'>
                     <span>Register berhasil, silahkan login!</span>
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
@@ -35,7 +35,7 @@ if (isset($_POST["daftar"])) {
 <html>
 
 <head>
-    <title>REGISTER - ALIFAH MEILIANA 1202204114 </title>
+    <title>REGISTER ALIFAH MEILIANA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <style>
         <?php include '../asset/style/style.css'; ?>
@@ -87,7 +87,7 @@ if (isset($_POST["daftar"])) {
                                 </div>
                                 <div class="text-center text-lg-start mt-4 pt-2">
                                     <button type="submit" name="daftar" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Daftar</button>
-                                    <p class="small fw-bold mt-2 pt-1 mb-0">anda sudah punya akun? <a href="Login-Nama.php" class="link-primary">Login</a></p>
+                                    <p class="small fw-bold mt-2 pt-1 mb-0">anda sudah punya akun? <a href="Login-Alifah.php" class="link-primary">Login</a></p>
                                 </div>
                         </form>
                     </div>

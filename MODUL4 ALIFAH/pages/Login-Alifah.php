@@ -4,7 +4,7 @@ session_start();
 if (isset($_COOKIE["email"]) && isset($_COOKIE["password"])) {
     $email = $_COOKIE["email"];
     $password = $_COOKIE["password"];
-    $result = mysqli_query($connector, "SELECT * FROM user_Nama WHERE email = '$email'");
+    $result = mysqli_query($connector, "SELECT * FROM user_alifah WHERE email = '$email'");
     $data = mysqli_fetch_assoc($result);
 
     if ($email === $data["email"] && $password === $data["password"]) {
@@ -16,9 +16,9 @@ if (isset($_COOKIE["email"]) && isset($_COOKIE["password"])) {
 if (isset($_POST["login"])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $query = mysqli_query($connector, "SELECT * FROM user_Nama WHERE email='$email'");
+    $query = mysqli_query($connector, "SELECT * FROM user_alifah WHERE email='$email'");
     //cek email  
-    if (mysqli_num_rows($query) == 1) {
+    if (mysqli_num_rows($query) === 1) {
         //cek password
         $data = mysqli_fetch_assoc($query);
         if (password_verify($password, $data["password"])) {
@@ -46,7 +46,7 @@ if (isset($_POST["login"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nama</title>
+    <title>LOGIN ALIFAH MEILIANA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <style>
         <?php include 'asset/style/style.css'; ?>

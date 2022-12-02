@@ -7,7 +7,7 @@ $result = mysqli_query($connector, $sqlquery);
 session_start();
 if (isset($_SESSION["login"])) {
   $login_as = $_SESSION["email"];
-  $result_login = mysqli_query($connector, "SELECT * FROM user_Nama WHERE email = '$login_as'");
+  $result_login = mysqli_query($connector, "SELECT * FROM user_alifah WHERE email = '$login_as'");
   $data_login = mysqli_fetch_assoc($result_login);
 }
 
@@ -15,7 +15,7 @@ $checkrow = mysqli_num_rows($result);
 
 if (isset($_GET['pesan'])) {
   if ($_GET['pesan'] == "berhasil") {
-    echo "<div class='alert alert-success' role='alert'>
+    echo "<div class='alert alert-primary' role='alert'>
     Data Berhasil ditambahkan.
   </div>";
   } else if ($_GET['pesan'] == "gagal") {
@@ -23,11 +23,11 @@ if (isset($_GET['pesan'])) {
     Data Gagal ditambahkan.
   </div>";
   } else if ($_GET['pesan'] == "hapus") {
-    echo "<div class='alert alert-success' role='alert'>
+    echo "<div class='alert alert-primary' role='alert'>
     Data Berhasil dihapus.
   </div>";
   } else if ($_GET['pesan'] == "update") {
-    echo "<div class='alert alert-success' role='alert'>
+    echo "<div class='alert alert-primary' role='alert'>
     Data Berhasil diupdate.
   </div>";
   }
@@ -39,7 +39,7 @@ if (isset($_GET['pesan'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nama</title>
+  <title>LIST ALIFAH MEILIANA</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <style>
     <?php include '../asset/style/index.css'; ?>
@@ -48,7 +48,7 @@ if (isset($_GET['pesan'])) {
 
 <body>
   <!-- Nav -->
-  <nav class="navbar navbar-expand navbar-dark bg-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>">
+  <nav class="navbar navbar-expand navbar-dark bg-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "primary"; ?>">
     <div class="container py-2">
       <?php if (isset($_SESSION["login"])) : ?>
         <div class="navbar-nav">
@@ -56,14 +56,14 @@ if (isset($_GET['pesan'])) {
           <a class="nav-link" href="./ListCar-Alifah.php">MyCar</a>
         </div>
         <div class="d-flex">
-          <a href="./Add-Alifah.php" class="btn btn-light text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" role="button">Add Car</a>
+          <a href="./Add-Alifah.php" class="btn btn-light text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "primary"; ?>" role="button">Add Car</a>
           <div class="dropdown ms-4">
-            <button class="btn btn-light dropdown-toggle text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-light dropdown-toggle text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "primary"; ?>" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <?= $data_login["nama"]; ?>
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="./Profile-Nama.php">Profile</a></li>
-              <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="../config/logout.php">Log Out</a></li>
+              <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "primary"; ?>" href="./Profile-Alifah.php">Profile</a></li>
+              <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "primary"; ?>" href="../config/logout.php">Log Out</a></li>
             </ul>
           </div>
         </div>
@@ -82,7 +82,7 @@ if (isset($_GET['pesan'])) {
     <div class="container">
       <div>
         <h1>My Show Room</h1>
-        <p>List Show Room ALIFAH M - 1202204114</p>
+        <p>List Show Room ALIFAH MEILIANA - 1202204114</p>
         <div class="d-flex gap-5">
           <?php
           if ($checkrow > 0) {
@@ -90,10 +90,10 @@ if (isset($_GET['pesan'])) {
               echo "<div class='card cardcontent' style='width: 18rem;'>
             <img src='../asset/images/" . $hasil["foto_mobil"] . "' class='card-img-top' alt='fotomobil' style='padding: 16px;'>
             <div class='card-body'>
-              <h5 class='card-title'>" . $hasil["nama_Nobil"] . "</h5>
+              <h5 class='card-title'>" . $hasil["nama_nobil"] . "</h5>
               <p class='card-text'>" . substr($hasil["deskripsi"], 0, 50) . '...' . "</p>
               <span class='d-flex'>
-                <a href='Detail-Nama.php?id=" . $hasil["id_mobil"] . "' class='btn btn-primary' style='border-radius: 100px; width:140px; height: 36px;'>Detail</a>
+                <a href='Detail-Alifah.php?id=" . $hasil["id_mobil"] . "' class='btn btn-primary' style='border-radius: 100px; width:140px; height: 36px;'>Detail</a>
                 <a href='../config/delete.php?id=" . $hasil["id_mobil"] . "' class='btn btn-danger' style='border-radius: 100px; width:140px; height: 36px; margin-left:20px;'>Delete</a>
               </span>
             </div>
