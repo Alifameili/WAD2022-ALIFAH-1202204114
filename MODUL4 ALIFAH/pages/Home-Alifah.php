@@ -62,7 +62,7 @@ function cekdb($result) {
   <!-- Nav End -->
 
   <?php if (isset($_SESSION["login"])) : ?>
-    <!-- Jumbotron -->
+ 
     <section id="home">
       <div class="container">
         <div class="d-flex gap-5 bungkus justify-content-center align-items-center">

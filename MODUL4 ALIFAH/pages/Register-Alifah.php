@@ -11,7 +11,7 @@ if (isset($_POST["daftar"])) {
 
     if (mysqli_num_rows(($result)) !== 1 && $password == $pwdConfirm) {
         $password = password_hash($password, PASSWORD_DEFAULT);
-        mysqli_query($connector, "INSERT INTO user_alifah VALUES ('', '$nama', '$email', '', '$no_hp')");
+        mysqli_query($connector, "INSERT INTO user_alifah VALUES ('', '$nama', '$email', '$password', '$no_hp')");
         echo "<div class='alert alert-success alert-dismissible fade show fixed-top' role='alert'>
                     <span>Register berhasil, silahkan login!</span>
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
