@@ -12,7 +12,7 @@ $pilihan_warna = [
 
 if (isset($_SESSION["login"])) {
     $login_as = $_SESSION["email"];
-    $result_login = mysqli_query($connector, "SELECT * FROM user_Nama WHERE email = '$login_as'");
+    $result_login = mysqli_query($connector, "SELECT * FROM user_alifah WHERE email = '$login_as'");
     $data_login = mysqli_fetch_assoc($result_login);
 } else {
     header("Location: Login-Alifah.php");
@@ -28,7 +28,7 @@ if (isset($_POST["update"])) {
     setcookie("warna_navbar", $_POST["warna_navbar"], time() + 86400, "/");
 
     if ($password == $konfirmasi_password) {
-        $query = "UPDATE user_Nama SET
+        $query = "UPDATE user_alifah SET
                 nama = '$nama',
                 no_hp = '$no_hp',
                 password = '$password'
@@ -47,7 +47,7 @@ if (isset($_POST["update"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nama</title>
+    <title>PROFILE ALIFAH MEILIANA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <style>
         <?php include 'asset/style/style.css'; ?>
@@ -55,28 +55,6 @@ if (isset($_POST["update"])) {
 </head>
 
 <body>
-    <!-- Awal Navbar -->
-    <nav class="navbar navbar-expand navbar-dark bg-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>">
-        <div class="container py-2">
-            <div class="navbar-nav">
-                <a class="nav-link" href="../index.php">Home</a>
-                <a class="nav-link" href="List-Alifah.php">MyCar</a>
-            </div>
-            <div class="d-flex">
-                <a href="./Add-Nama.php" class="btn btn-light text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" role="button">Add Car</a>
-                <div class="dropdown ms-4">
-                    <button class="btn btn-light text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?> dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?= $data_login["nama"]; ?>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="#">Profile</a></li>
-                        <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="../config/logout.php">Log Out</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- Akhir Navbar -->
 
     <div class="container mt-4">
         <h2 class="fw-bold text-center">Profile</h2>
@@ -109,25 +87,12 @@ if (isset($_POST["update"])) {
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="konfimasi_password" class="col-sm-2 col-form-label text-muted">Konfirmasi Kata Sandi</label>
+                        <label for="konfimasi_password" class="col-sm-2 col-form-label text-muted">Konfirmasi Kata Sandi(ulangi)</label>
                         <div class="col-sm-10">
                             <input type="password" class="form-control text-muted" id="password2" name="password2" placeholder="Konfirmasi Kata Sandi">
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                        <label for="warna_navbar" class="col-sm-2 col-form-label text-muted">Warna Navbar</label>
-                        <div class="col-sm-10">
-                            <select class="form-select text-muted" aria-label="Warna Navbar" id="warna_navbar" name="warna_navbar">
-                                <?php foreach ($pilihan_warna as $warna => $value) : ?>
-                                    <?php $selected = $warna == $_COOKIE["warna_navbar"] ? "selected" : "" ?>
-                                    <option value="<?= $warna; ?>" <?= $selected; ?>><?= $value; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="text-center mt-5">
-                        <button type="submit" class="btn btn-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?> px-4 button" name="update">Update</button>
-                    </div>
+        
                 </form>
             </div>
         </div>
