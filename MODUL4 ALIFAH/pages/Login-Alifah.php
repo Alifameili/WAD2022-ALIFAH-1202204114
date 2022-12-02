@@ -16,7 +16,7 @@ if (isset($_COOKIE["email"]) && isset($_COOKIE["password"])) {
 if (isset($_POST["login"])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $query = mysqli_query($connector, "SELECT * FROM user_alifah WHERE email='$email'");
+    $query = mysqli_query($connector, "SELECT * FROM user_alifah WHERE email='$password'");
     //cek email  
     if (mysqli_num_rows($query) === 1) {
         //cek password
